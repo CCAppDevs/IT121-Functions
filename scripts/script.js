@@ -74,6 +74,44 @@ function Sum(end) {
     return result;
 }
 
+// unit of work: n + Sum(n - 1)
+
+// recursion
+function RecursiveSum(end) {
+    // stop at 0
+    if (end <= 0) {
+        // stop
+        return 0;
+    }
+
+    return end + RecursiveSum(end - 1);
+}
+
+// RecursiveSum(5)
+// Sum(5 + Sum(4 + Sum(3 + Sum(2 + Sum(1 + Sum(0))))))
+// 15
 
 
 // console.log(a); // out of scope
+
+// loops
+// while loop (while condition is true, do the thing)
+let count = 10;
+
+while (count > 0) {
+    // do thing
+    console.log("doing thing in while loop");
+    count--;
+}
+
+// do while loop (do the thing once. While condition is true, do the thing)
+do {
+    console.log("Doing thing in do while loop");
+} while (count > 0);
+
+// range-based for loop (do the thing x amount of times)
+for (let i = 0; i < 10; i++) {
+    
+}
+
+// for each loop (for each element in collection do a thing)
