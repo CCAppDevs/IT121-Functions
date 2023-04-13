@@ -109,9 +109,36 @@ do {
     console.log("Doing thing in do while loop");
 } while (count > 0);
 
+let arr = [ "starts", "middle", "ends" ];
+
+let item = arr.pop();
+console.log("Array pop had: " + item);
+
+let test = arr.join(" ");
+console.log("Joined array: " + test);
+
+arr.reverse();
+
+// mid
+// start
+arr.push(1);
+arr.push(2);
+arr.push(3);
+arr.push(400);
+arr.push("jesse");
+arr.push("toast");
+
+arr = arr.slice(2,-2);
+
+arr.filter((item) => {
+    return item < 400;
+})
+
 // range-based for loop (do the thing x amount of times)
-for (let i = 0; i < 10; i++) {
-    
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);
 }
+
+
 
 // for each loop (for each element in collection do a thing)
